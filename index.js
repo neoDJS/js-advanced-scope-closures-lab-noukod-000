@@ -8,3 +8,21 @@ function produceDrivingRange(range){
       }
   }
 }
+
+function produceTipCalculator(percent){
+
+    return function(fare){
+        return fare * percent;
+    }
+}
+
+function createDriver(){
+    let driverId = 0;
+
+    return class Driver{
+        constructor(name){
+            this.name = name;
+            this.id = ++driverId;
+        }
+    }
+}
